@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    font-family: "Inter", sans-serif;
+    background-color: hsla(227, 60%, 97%, 1);
+}
+
+header img{
+    position: relative;
+    top: 2rem;
+    left: 30px;
+}
+
+main{
+    display: flex;
+    height: 60rem;
+    margin: 0 auto;
+    gap: 8rem;
+}
+
+.conteudo_criptografar{
+    margin: 7rem 0;
+}
+
+#texto_criptografar{
+    width: 60rem;
+    border: none;
+    font-family: "Inter", sans-serif;
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+    color: hsla(213, 84%, 24%, 1);
+    background-color: hsla(227, 60%, 97%, 1);
+    height: 55rem;
+    padding: 0.5rem;
+}
+
+textarea::placeholder {
+    color: hsla(213, 84%, 24%, 1);
+}
+
+textarea:focus {
+    outline: none;
+}
+
+aside{
+    display: flex;
+    align-items: center;
+    padding: 1.6rem;
+}
+
+span{
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+
+.buttons{
+    display: flex;
+    gap: 2.4rem;
+}
+
+.criptografar{
+    font-family: "Inter", sans-serif;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    padding: 2.4rem;
+    border: none;
+    border-radius: 2.4rem;
+    background-color: hsla(213, 84%, 24%, 1);
+    color: hsla(228, 52%, 94%, 1);
+    width: 32.8rem;
+}
+
+.descriptografar{
+    font-family: "Inter", sans-serif;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    padding: 2.4rem;
+    border: none;
+    border-radius: 2.4rem;
+    background-color: hsla(214, 26%, 88%, 1);
+    color: hsla(213, 84%, 24%, 1);
+    border: 1px solid hsla(213, 84%, 24%, 1);
+    width: 32.8rem;
+}
+
+.conteudo_criptografado{
+    width: 40rem;
+    height: 80rem;
+    background-color: hsla(0, 0%, 100%, 1);
+    border-radius: 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2{
+    text-align: center;
+    color: hsla(213, 84%, 24%, 1);
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+}
+
+.texto_criptografado{
+    display: flex;
+    gap: 1.6rem;
+    flex-direction: column;
+    margin: 3.2rem;
+    text-align: center;
+}
+
+p{
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: hsla(210, 9%, 31%, 1);
+}
+
+footer{
+    width: 100%;
+    background-color: hsla(213, 84%, 24%, 1);
+    text-align: center;
+    font-size: 1.6rem;
+    color: hsla(228, 52%, 94%, 1);
+    padding: 0.6rem;
+}
+
