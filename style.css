@@ -133,6 +133,7 @@ p{
     color: hsla(213, 84%, 24%, 1);
     line-height: 3.6rem;
     justify-content: flex-start !important;
+    text-align: left !important;
 }
 
 footer{
