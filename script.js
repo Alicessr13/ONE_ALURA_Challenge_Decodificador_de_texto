@@ -73,5 +73,26 @@ function imprimirConteudo(novaStr) {
     let conteudoCriptografado = document.getElementById("texto_criptografado");
     conteudoCriptografado.innerHTML = novaStr;
     conteudoCriptografado.classList.add("texto_criptografado");
+
+    if (document.getElementById("copiar")) {
+        return; 
+    }
+
+    let button = document.createElement("button");
+    button.innerText = "Copiar"
+    button.id = "copiar";
+    let container = document.getElementById("buttonCopia");
+    container.appendChild(button);
+
+    button.classList.add("buttonCopiar");
 }
 
+
+document.getElementById('buttonCopia').addEventListener("click", function() {
+    navigator.clipboard.writeText().then(function() {
+        console.log('Texto copiado para a área de transferência!');
+        conteudoCriptografado.innerHTML = "Nenhuma mensagem";
+    }).catch(function(error) {
+        console.error('Falha ao copiar texto: ', error);
+    });
+});
