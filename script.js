@@ -22,7 +22,6 @@ function criptografar() {
     novaStr = novaStr.replace(new RegExp(listaLetras[2], 'g'), criptografia[2]);
     novaStr = novaStr.replace(new RegExp(listaLetras[3], 'g'), criptografia[3]);
     novaStr = novaStr.replace(new RegExp(listaLetras[4], 'g'), criptografia[4]);
-    console.log(novaStr);
 
     imprimirConteudo(novaStr);
 }
@@ -40,7 +39,6 @@ function descriptografar() {
     novaStr = novaStr.replace(new RegExp(criptografia[2], 'g'), listaLetras[2]);
     novaStr = novaStr.replace(new RegExp(criptografia[3], 'g'), listaLetras[3]);
     novaStr = novaStr.replace(new RegExp(criptografia[4], 'g'), listaLetras[4]);
-    console.log(novaStr);
 
     imprimirConteudo(novaStr);
 }
@@ -74,25 +72,25 @@ function imprimirConteudo(novaStr) {
     conteudoCriptografado.innerHTML = novaStr;
     conteudoCriptografado.classList.add("texto_criptografado");
 
+    let container = document.getElementById("buttonCopia");
+
     if (document.getElementById("copiar")) {
-        return; 
+        container.removeChild(document.getElementById("copiar"));
     }
 
     let button = document.createElement("button");
     button.innerText = "Copiar"
     button.id = "copiar";
-    let container = document.getElementById("buttonCopia");
     container.appendChild(button);
 
     button.classList.add("buttonCopiar");
+
+    button.addEventListener('click', function() {
+        navigator.clipboard.writeText(novaStr).then(function() {
+        })
+    });
 }
 
 
-document.getElementById('buttonCopia').addEventListener("click", function() {
-    navigator.clipboard.writeText().then(function() {
-        console.log('Texto copiado para a área de transferência!');
-        conteudoCriptografado.innerHTML = "Nenhuma mensagem";
-    }).catch(function(error) {
-        console.error('Falha ao copiar texto: ', error);
-    });
-});
+
+
