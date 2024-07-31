@@ -6,6 +6,11 @@
 
 :root{
     font-size: 62.5%;
+    --cor-principal: hsla(213, 84%, 24%, 1);
+    --fundo: hsla(227, 60%, 97%, 1);
+    --cor-secundaria: hsla(214, 26%, 88%, 1);
+    --cor-terciaria: hsla(0, 0%, 100%, 1);
+    --paragrafo: hsla(210, 9%, 31%, 1);
 }
 
 body{
@@ -13,7 +18,7 @@ body{
     display: grid;
     grid-template-rows: auto 1fr auto;
     font-family: "Inter", sans-serif;
-    background-color: hsla(227, 60%, 97%, 1);
+    background-color: var(--fundo);
 }
 
 header img{
@@ -39,15 +44,15 @@ main{
     font-family: "Inter", sans-serif;
     font-size: 3.2rem;
     line-height: 4.8rem;
-    color: hsla(213, 84%, 24%, 1);
-    background-color: hsla(227, 60%, 97%, 1);
+    color: var(--cor-principal);
+    background-color: var(--fundo);
     height: 55rem;
     padding: 0.5rem;
     resize: none;
 }
 
 textarea::placeholder {
-    color: hsla(213, 84%, 24%, 1);
+    color: var(--cor-principal);
 }
 
 textarea:focus {
@@ -81,21 +86,21 @@ span{
 }
 
 .criptografar {
-    background-color: hsla(213, 84%, 24%, 1);
-    color: hsla(228, 52%, 94%, 1);
+    background-color: var(--cor-principal);
+    color: var(--cor-secundaria);
 }
 
 .descriptografar {
-    background-color: hsla(214, 26%, 88%, 1);
-    color: hsla(213, 84%, 24%, 1);
-    border: 1px solid hsla(213, 84%, 24%, 1);
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+    border: 1px solid var(--cor-principal);
 }
 
 #conteudo_criptografado{
     width: 100%;
     max-width: 40rem;
     height: auto;
-    background-color: hsla(0, 0%, 100%, 1);
+    background-color: var(--cor-terciaria);
     border-radius: 3.2rem;
     display: flex;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -108,7 +113,7 @@ span{
 
 h2{
     text-align: center;
-    color: hsla(213, 84%, 24%, 1);
+    color: var(--cor-principal);
     font-size: 2.4rem;
     line-height: 2.9rem;
 }
@@ -133,13 +138,13 @@ h2{
 p{
     font-size: 1.6rem;
     line-height: 2.4rem;
-    color: hsla(210, 9%, 31%, 1);
+    color: var(--paragrafo);
 }
 
 .texto_criptografado{
     font-family: "Inter", sans-serif;
     font-size: 2.4rem;
-    color: hsla(213, 84%, 24%, 1);
+    color: var(--cor-principal);
     line-height: 3.6rem;
     justify-content: flex-start !important;
     text-align: left !important;
@@ -151,19 +156,19 @@ p{
     line-height: 2rem;
     padding: 2.4rem;
     border: none;
-    background-color: hsla(214, 26%, 88%, 1);
-    color: hsla(213, 84%, 24%, 1);
-    border: 1px solid hsla(213, 84%, 24%, 1);
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+    border: 1px solid var(--cor-principal);
     width: 32.8rem;
     border-radius: 2.4rem;
 }
 
 footer{
     width: 100%;
-    background-color: hsla(213, 84%, 24%, 1);
+    background-color: var(--cor-principal);
     text-align: center;
     font-size: 1.6rem;
-    color: hsla(228, 52%, 94%, 1);
+    color: var(--cor-terciaria);
     padding: 0.6rem;
 }
 
